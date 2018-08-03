@@ -2,3 +2,14 @@
 /neuroConstruct/simulations
 /neuroConstruct/generatedNEURON
 /neuroConstruct/morphologies/AmacrineChen.java.ser.bak
+/NeuroML2/*.hoc
+/NeuroML2/*.mod
+/NeuroML2/LEMS_Amacrine.xml
+/NeuroML2/*_nrn.py
+/NeuroML2/runsim.sh
+/neuroConstruct/generatedNeuroML2/*.hoc
+/neuroConstruct/generatedNeuroML2/*.mod
+/neuroConstruct/generatedNeuroML2/LEMS_Amacrine.xml
+/neuroConstruct/generatedNeuroML2/*_nrn.py
+/neuroConstruct/generatedNeuroML2/runsim.sh
+/neuroConstruct/generatedNeuroML2/x86_64
