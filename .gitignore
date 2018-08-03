@@ -13,3 +13,8 @@
 /neuroConstruct/generatedNeuroML2/*_nrn.py
 /neuroConstruct/generatedNeuroML2/runsim.sh
 /neuroConstruct/generatedNeuroML2/x86_64
+/NeuroML2/.ipynb_checkpoints
+/NeuroML2/Amacrine.net.nml.png
+/NeuroML2/*.pov
+/NeuroML2/AmacrineChen.cell.png
+*.pyc
