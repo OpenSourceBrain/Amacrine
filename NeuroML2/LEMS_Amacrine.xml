@@ -1,0 +1,38 @@
+<Lems xmlns="http://www.neuroml.org/lems/0.7.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/lems/0.7.2  https://raw.githubusercontent.com/LEMS/LEMS/development/Schemas/LEMS/LEMS_v0.7.2.xsd">
+
+    <Target component="sim1" reportFile="/home/padraig/git/Amacrine/neuroConstruct/simulations/Sim_3/simulator.props" timesFile="/home/padraig/git/Amacrine/neuroConstruct/simulations/Sim_3/time.dat"/>
+
+        <!--Include standard NeuroML 2 ComponentType definitions-->
+
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+
+    
+
+        <!--Include the generated NeuroML 2 files-->
+
+
+        <!--   Channel/synapse files-->
+    <Include file="LeakConductance.channel.nml"/>
+        <!--   Cell files-->
+    <Include file="AmacrineChen.cell.nml"/>
+        <!--   Network file-->
+    <Include file="Amacrine.net.nml"/>
+    
+
+        <!--Note: this could be: Simulation id="sim1" ... , but Component type="Simulation" ... 
+        is used to allow validation of this file according to the LEMS schema specified above...-->
+    <Component type="Simulation" id="sim1" length="100.0ms" step="0.025ms" target="network_Amacrine">
+        
+        <Display id="OneCell_v" title="Amacrine: Default Simulation Configuration, OneCell, VOLTAGE" xmin="-0.010000001" xmax="0.11000001" ymin="-0.104" ymax="0.064" timeScale="1s">
+            <Line id="v" timeScale="1s" quantity="OneCell/0/AmacrineChen/0/v" scale="1 V" color="#000000"/>
+        </Display>
+    
+        <OutputFile id="OneCell_v_0_0_OF" fileName="/home/padraig/git/Amacrine/neuroConstruct/simulations/Sim_3/OneCell_0.0.dat">
+            <OutputColumn id="v" quantity="OneCell/0/AmacrineChen/0/v"/>
+        </OutputFile>
+    </Component>
+
+
+</Lems>
