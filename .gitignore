@@ -18,3 +18,4 @@
 /NeuroML2/AmacrineChen.cell.png
 *.pyc
 /NeuroML2/x86_64
+/NeuroML2/*.dat

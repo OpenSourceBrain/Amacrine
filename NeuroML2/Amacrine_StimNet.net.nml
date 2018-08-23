@@ -1,0 +1,30 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2beta5.xsd" id="Amacrine_StimNet">
+    <include href="AmacrineChen.cell.nml"/>
+    <pulseGenerator id="stim_500ms" delay="500ms" duration="100ms" amplitude="0.5nA"/>
+    <pulseGenerator id="stim_650ms" delay="650ms" duration="100ms" amplitude="0.5nA"/>
+    <pulseGenerator id="stim_200ms" delay="200ms" duration="100ms" amplitude="0.5nA"/>
+    <pulseGenerator id="stim_350ms" delay="350ms" duration="100ms" amplitude="0.5nA"/>
+    <pulseGenerator id="stim_50ms" delay="50ms" duration="100ms" amplitude="0.5nA"/>
+    <network id="Amacrine_StimNet">
+        <population id="popA" component="AmacrineChen" type="populationList">
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <inputList id="stim_500ms_input" population="popA" component="stim_500ms">
+            <input id="0" target="../popA/0/AmacrineChen" destination="synapses" segmentId="1500"/>
+        </inputList>
+        <inputList id="stim_650ms_input" population="popA" component="stim_650ms">
+            <input id="0" target="../popA/0/AmacrineChen" destination="synapses" segmentId="2000"/>
+        </inputList>
+        <inputList id="stim_200ms_input" population="popA" component="stim_200ms">
+            <input id="0" target="../popA/0/AmacrineChen" destination="synapses" segmentId="500"/>
+        </inputList>
+        <inputList id="stim_350ms_input" population="popA" component="stim_350ms">
+            <input id="0" target="../popA/0/AmacrineChen" destination="synapses" segmentId="1000"/>
+        </inputList>
+        <inputList id="stim_50ms_input" population="popA" component="stim_50ms">
+            <input id="0" target="../popA/0/AmacrineChen" destination="synapses" segmentId="0"/>
+        </inputList>
+    </network>
+</neuroml>

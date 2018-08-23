@@ -1,0 +1,41 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.3.12 (libNeuroML v0.2.44)
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="TestInputs"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="Amacrine_StimNet.net.nml"/>
+    <Include file="AmacrineChen.cell.nml"/>
+    <Include file="LeakConductance.channel.nml"/>
+   
+    <Simulation id="TestInputs" length="800ms" step="0.025ms" target="Amacrine_StimNet" seed="12345">  <!-- Note seed: ensures same random numbers used every run -->
+        
+        <Display id="Some_voltages" title="Plots of Some_voltages" timeScale="1ms" xmin="-80.0" xmax="880.0" ymin="-80" ymax="40">
+            <Line id="popA_0_AmacrineChen_0_v" quantity="popA/0/AmacrineChen/0/v" scale="1mV" color="#6aa799" timeScale="1ms"/>
+            <Line id="popA_0_AmacrineChen_500_v" quantity="popA/0/AmacrineChen/500/v" scale="1mV" color="#029a72" timeScale="1ms"/>
+            <Line id="popA_0_AmacrineChen_1000_v" quantity="popA/0/AmacrineChen/1000/v" scale="1mV" color="#d340bb" timeScale="1ms"/>
+            <Line id="popA_0_AmacrineChen_1500_v" quantity="popA/0/AmacrineChen/1500/v" scale="1mV" color="#4c73a9" timeScale="1ms"/>
+            <Line id="popA_0_AmacrineChen_2000_v" quantity="popA/0/AmacrineChen/2000/v" scale="1mV" color="#5e503a" timeScale="1ms"/>
+        </Display>
+        
+        <OutputFile id="AmacrineChen_voltages_dat" fileName="AmacrineChen_voltages.dat">
+            <OutputColumn id="popA_0_AmacrineChen_0_v" quantity="popA/0/AmacrineChen/0/v"/> 
+            <OutputColumn id="popA_0_AmacrineChen_500_v" quantity="popA/0/AmacrineChen/500/v"/> 
+            <OutputColumn id="popA_0_AmacrineChen_1000_v" quantity="popA/0/AmacrineChen/1000/v"/> 
+            <OutputColumn id="popA_0_AmacrineChen_1500_v" quantity="popA/0/AmacrineChen/1500/v"/> 
+            <OutputColumn id="popA_0_AmacrineChen_2000_v" quantity="popA/0/AmacrineChen/2000/v"/> 
+        </OutputFile>
+        
+    </Simulation>
+
+</Lems>
