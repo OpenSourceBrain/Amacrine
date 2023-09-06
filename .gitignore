@@ -19,3 +19,5 @@
 *.pyc
 /NeuroML2/x86_64
 /NeuroML2/*.dat
+/NeuroML2/arm64
+/NeuroML2/simulator.props
